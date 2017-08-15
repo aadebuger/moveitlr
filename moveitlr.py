@@ -16,5 +16,7 @@ def getPose():
 #        # Connect to the right_arm move group 
         right_arm = MoveGroupCommander('braccio_arm') 
         print("pose=",right_arm.get_current_pose())
-
+        pose1 = right_arm.get_current_pose()
+        print("pos seq",pose1.header.frame_id,pose1.header.seq)
+        print("pos position",pose1.pose)
 getPose()
